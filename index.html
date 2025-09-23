@@ -61,7 +61,7 @@
             </div>
             <div class="col-12 col-md-6">
                 <div id="plates" class="carousel slide carousel-fade plate-stage"
-                    data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false" aria-label="Capabilities slideshow">
+                    data-bs-ride="carousel" data-bs-interval="1500" data-bs-pause="false" aria-label="Capabilities slideshow">
                     <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="images/gt-full.png" class="d-block w-100" alt="Georgia Institute of Technology Logo" loading="eager">
@@ -117,41 +117,34 @@
         </div>
     </div>
 
-    <div class="pt-5 pb-4 ps-4 container-fluid" id="about-section">
-        <div class="row text-center" id="about">
-            <h2 class="manrope-semibold">About Me</h2>
-        </div>
+    <section id="about" class="about-section">
+        <div class="about-wrap">
+            <div class="about-main" aria-labelledby="about-title">
+                <h2 id="about-title" class="manrope-semibold">About Me</h2>
+                <p class="inter-regular">
+                    I'm a data scientist who delivers measurable results from complex, high‑stakes data. Over the past 7+ years with the U.S. Air Force and in healthcare, I've built machine‑learning and analytics solutions that improved F‑15 fleet availability by ~600 days per year and developed a multithreaded data translator that ran 10× faster, processed 6× more data, and reduced output size by 13×—enabling near real‑time aircraft health monitoring. My work has been recognized with honors including Junior Engineer of the Year (2022).
+                </p>
+                <p class="inter-regular">
+                    I hold an M.S. in Computer Science (Machine Learning) from Georgia Tech, a B.S. in Industrial & Systems Engineering from Georgia Tech, and an MBA from Kennesaw State. I'm hands‑on with Python, PyTorch, scikit‑learn, Dask, SQL, and the modern data stack. I care about reproducible experiments and communicating insights that drive decisions.
+                </p>
+                <div class="about-cta" role="group" aria-label="Primary actions">
+                    <a class="btn custom-about-btn" href="mailto:russellemily13@gmail.com">Email me</a>
+                    <a class="btn custom-about-btn-secondary" href="/assets/Emily_Fairfield_Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+                </div>
+            </div>
 
-        <div class="row">
-            <div class="col-lg-1 icon-col mt-4">
-                <i class="fa-solid fa-user-graduate fa-4x blue-icon-class text-center"></i>
-            </div>
-            <div class="col-lg-3 mt-4">
-                <p class="school custom-p inter-medium">Georgia Institute of Technology</p>
-                <p class="custom-p inter-regular">M.S. Computer Science (Machine Learning Concentration)</p>
-                <p class="custom-p inter-regular">B.S. Industrial & Systems Engineering</p>
-                <p class="school custom-p inter-medium">Kennesaw State University</p>
-                <p class="custom-p inter-regular">Master of Business Administration</p>
-            </div>
-
-            <div class="col-lg-1 icon-col mt-4">
-                <i class="fa fa-briefcase fa-4x blue-icon-class"></i>
-            </div>
-            <div class="col-lg-3 mt-4">
-                <p class="custom-p inter-regular">7+ years Data Science</p>
-                <p class="custom-p inter-regular">9+ years Consultative Services</p>
-                <p class="custom-p inter-regular">Healthcare + Defense + Logistics</p>
-            </div>
-            <div class="col-lg-1 icon-col mt-4">
-                <i class="fa-solid fa-award fa-4x blue-icon-class"></i>
-            </div>
-            <div class="col-lg-3 mt-4">
-                <p class="custom-p inter-regular">Air Force Civilian Achievement Award</p>
-                <p class="custom-p inter-regular">2022 Junior Engineer of the Year</p>
-            </div>
-            
+            <aside class="about-facts" aria-label="Fast facts">
+                <ul>
+                    <li class="inter-regular"><strong class="inter-medium">Now:</strong> Exploring NLP + production ML roles</li>
+                    <li class="inter-regular"><strong class="inter-medium">Domains:</strong> Healthcare, Defense, Logistics</li>
+                    <li class="inter-regular"><strong class="inter-medium">Clearance:</strong> Active U.S. Secret</li>
+                    <li class="inter-regular"><strong class="inter-medium">Awards:</strong> Air Force Civilian Achievement; AFLCMC General James Ferguson Award (Finalist, 2024); AFLCMC Junior Engineer of the Year (2022)</li>
+                    <li class="inter-regular"><strong class="inter-medium">Toolbox:</strong> Python, PyTorch, scikit‑learn, Dask, Pandas, NumPy, Matplotlib, SQL, VBA</li>
+                    <li class="inter-regular"><strong class="inter-medium">Education:</strong> M.S. CS (ML) — Georgia Tech; MBA — Kennesaw State</li>
+                </ul>
+            </aside>
         </div>
-    </div>
+    </section>
 
     <div class="pt-5 pb-5 ps-4 container-fluid blue-row">
         <div class="row text-center" id="projects">
@@ -163,7 +156,7 @@
                     <video src="./cutlist.mp4" class="card-img-top" muted autoplay loop></video>
     
                     <div class="card-body">
-                        <h5 class="card-title manrope-medium">Cut List Generator</h5>
+                        <h5 class="card-title dm-serif-display-regular">Cut List Generator</h5>
                         <p class="card-text inter-regular">A tool to create a minimum cost cut list from a bill of materials & list of stock boards available for purchase.</p>
                         <a href="https://github.com/emilyfairfield/cut-list" class="btn custom-btn">Learn More</a>
                     </div>
@@ -174,7 +167,7 @@
                     <video src="./image-classification-video.mp4" class="card-img-top" muted autoplay loop></video>
     
                     <div class="card-body">
-                        <h5 class="card-title manrope-medium">Image Classification</h5>
+                        <h5 class="card-title dm-serif-display-regular">Image Classification</h5>
                         <p class="card-text inter-regular">Built, trained, tuned, & tested a CNN to classify images from the CIFAR-10 dataset.</p>
                         <a href="https://github.com/emilyfairfield/image-classification" class="btn custom-btn">Learn More</a>
                     </div>
@@ -185,7 +178,7 @@
                     <video src="./img-inversion-video.mp4" class="card-img-top" muted autoplay loop></video>
     
                     <div class="card-body">
-                        <h5 class="card-title manrope-medium">Image Inversion 3 Ways (with Time Tests)</h5>
+                        <h5 class="card-title dm-serif-display-regular">Image Inversion 3 Ways (with Time Tests)</h5>
                         <p class="card-text inter-regular">Inverted all pixels of a directory of images using nested for loops, vectorization, & multithreaded vectorization.</p>
                         <a href="https://github.com/emilyfairfield/image-inversion" class="btn custom-btn">Learn More</a>
                     </div>
@@ -198,7 +191,7 @@
     <footer id="contact" class="py-5 mt-auto">
         <div class="container">
           <div class="row">
-            <h2 class="text-center manrope-semibold">Get in Touch!</h2>
+            <h2 class="text-center manrope-semibold" style="color: #f6f6a4;">Get in Touch!</h2>
           </div>
           <div class="row mt-4">
                 <div class="col contact-icons text-center">
@@ -216,7 +209,7 @@
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('main-navbar');
             const mainContent = document.getElementById('main-content');
-            const aboutSection = document.getElementById('about-section');
+            const aboutSection = document.getElementById('about');
 
             // Get the position of the About Me section
             const aboutPosition = aboutSection.offsetTop;
