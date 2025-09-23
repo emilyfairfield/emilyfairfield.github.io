@@ -1,0 +1,484 @@
+/* Canvas */
+.plate-stage {
+    height: 420px;
+    background: #9288f8;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Make carousel column purple on large screens */
+@media screen and (min-width: 768px) {
+    #main-content .col-md-6:nth-child(1) {
+        height: 100vh;
+    }
+
+    #main-content .col-md-6:nth-child(2) {
+        background-color: #9288f8;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .plate-stage {
+        border-radius: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .plate-stage .carousel-inner {
+        height: auto;
+        width: 100%;
+    }
+
+    .video-holder {
+        height: 100vh;
+    }
+}
+
+/* Small screen carousel styling */
+/* @media screen and (max-width: 767px) {
+    .plate-stage {
+        height: 420px;
+        border-radius: 16px;
+        margin: 0 auto;
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .plate-stage .carousel-inner {
+        height: 100%;
+        width: 100%;
+    }
+    
+    /* Override general rule for small screens - keep it simple */
+    .plate-stage .carousel-item {
+        height: 100%;
+        display: block;
+        text-align: center;
+        line-height: 420px;
+        /* Remove absolute positioning that was causing issues */
+    }
+    
+    .plate-stage .carousel-item img {
+        max-height: 300px;
+        max-width: 85%;
+        min-height: 180px;
+        width: auto !important;
+        vertical-align: middle;
+        display: inline-block;
+        line-height: normal;
+    }
+/* } */ */
+
+/* Hero section background */
+#main-content {
+    background-color: #FFBD74 !important;
+    color: #9288f8;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+/* Ensure orange background on all screen sizes */
+#main-content .col-12,
+#main-content .col-md-6:first-child {
+    background-color: #FFBD74 !important;
+}
+
+/* Make the row full height when side by side */
+#main-content .row {
+    min-height: 100vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#main-content .col-md-6 {
+    display: flex;
+    align-items: center;
+}
+
+/* Scroll indicator triangle */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fffa9d;
+    opacity: 1;
+}
+
+/* Reduce spacing between name and carousel on small screens */
+@media screen and (max-width: 767px) {
+    #main-content .row {
+        min-height: auto;
+        gap: 0;
+        margin: 0;
+    }
+
+    /* Force orange background on name column for small screens */
+    #main-content .col-12:first-child,
+    #main-content .col-md-6:first-child {
+        background-color: #FFBD74 !important;
+    }
+
+    /* Make carousel section full width with no rounded corners on small screens */
+    #main-content .col-12:nth-child(2),
+    #main-content .col-md-6:nth-child(2) {
+        background-color: #9288f8 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Remove rounded corners and make carousel fill container on small screens */
+    .plate-stage {
+        border-radius: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Vertically center carousel contents on small screens */
+    .plate-stage .carousel-inner {
+        display: flex !important;
+        align-items: center !important;
+        height: 100% !important;
+    }
+
+    .plate-stage .carousel-item {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
+    }
+
+    /* Consistent image sizing for small screens */
+    .plate-stage .carousel-item img {
+        max-height: 280px !important;
+        max-width: 280px !important;
+        min-height: 180px !important;
+        min-width: 180px !important;
+        object-fit: contain !important;
+        width: auto !important;
+        height: auto !important;
+    }
+}
+
+/* Faster fade transitions to reduce overlap */
+.plate-stage.carousel-fade .carousel-item {
+    transition-duration: 0.05s;
+}
+
+/* Force both fade-in and fade-out to be fast */
+.plate-stage.carousel-fade .carousel-item.active {
+    transition: opacity .5s ease-in-out;
+}
+
+.plate-stage.carousel-fade .carousel-item:not(.active) {
+    transition: opacity .5s ease-in-out;
+}
+
+/* Make images center + scale consistently - GENERAL RULE */
+.plate-stage .carousel-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.plate-stage .carousel-item img {
+    max-height: 350px;
+    max-width: 350px;
+    min-height: 220px;
+    min-width: 220px;
+    object-fit: contain;
+    width: auto !important;
+    height: auto !important;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .carousel,
+    .carousel * { animation: none !important; transition: none !important; }
+}
+
+.icon-col{
+    text-align:center;
+}
+.londrina-shadow-regular {
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFBD74;
+}
+
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFBD74;
+}
+
+.monofett-regular {
+  font-family: "Monofett", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFBD74;
+}
+.bungee-inline-regular {
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #9288f8;
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #9288f8;
+}
+
+.manrope-regular {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fffa9d;
+}
+
+.manrope-medium {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.manrope-semibold {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.blue-row{
+    background-color:#fffa9d;
+    color:#9288f8;
+}
+
+/* Purple border for project cards */
+.blue-row .card {
+    border: 4px solid #9288f8;
+}
+
+/* Equal height cards */
+.blue-row .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blue-row .row > [class*="col-"] {
+    display: flex;
+}
+
+.blue-row .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blue-row .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blue-row .card-text {
+    flex-grow: 1;
+}
+
+/* Add vertical spacing between cards on all screen sizes */
+.blue-row .card {
+    margin-bottom: 2rem;
+}
+
+/* Additional spacing for mobile when cards are stacked */
+@media screen and (max-width: 767px) {
+    .blue-row .row > [class*="col-"] {
+        margin-bottom: 1.5rem;
+    }
+
+    .blue-row .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.blue-icon-class{
+    color:#FFBD74;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.custom-btn{
+    background-color:#9288f8 !important;
+    color:#fffa9d !important;
+    border-color:#9288f8 !important;
+}
+
+.navbar-custom {
+    background-color: #FFBD74;
+    color:white;
+}
+
+/* Hide navbar by default */
+#main-navbar {
+    display: none;
+}
+
+/* Show navbar when it has fixed-top class */
+#main-navbar.fixed-top {
+    display: block;
+}
+
+/* About Me section background */
+#about-section {
+    background-color: #9288f8;
+    color: #fffa9d;
+}
+
+/* Footer styling */
+#contact {
+    background-color: #9288f8;
+    color: #FFBD74;
+}
+
+.school{
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.video-holder{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFBD74;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-holder video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-text {
+    text-align: center;
+    color: black;
+}
+
+.video-header{
+    font-size: 6rem;
+}
+
+.video-subtitle{
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    display: block;
+    line-height: 1.2;
+}
+
+.video-paragraph{
+    font-size: 1.2rem;
+}
+
+/* Responsive font sizing for Emily Fairfield header and subtitle */
+@media screen and (max-width: 1200px) {
+    .video-header {
+        font-size: 4rem;
+    }
+    .video-subtitle {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .video-header {
+        font-size: 4rem;
+    }
+    .video-subtitle {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-header {
+        font-size: 4rem;
+    }
+    .video-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .video-header {
+        font-size: 3.5rem;
+    }
+    .video-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .video-header {
+        font-size: 3rem;
+    }
+    .video-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .custom-p {
+        text-align: center;
+    }
+}
+
+/* Always make the second column purple & remove its internal padding */
+#main-content .row > [class*="col-"]:nth-child(2) {
+  background-color: #9288f8;
+  padding: 0;
+}

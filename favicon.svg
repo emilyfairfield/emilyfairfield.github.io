@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Neural network nodes -->
+  <circle cx="20" cy="25" r="4" fill="#2563eb"/>
+  <circle cx="20" cy="75" r="4" fill="#2563eb"/>
+
+  <circle cx="50" cy="15" r="4" fill="#2563eb"/>
+  <circle cx="50" cy="40" r="4" fill="#2563eb"/>
+  <circle cx="50" cy="60" r="4" fill="#2563eb"/>
+  <circle cx="50" cy="85" r="4" fill="#2563eb"/>
+
+  <circle cx="80" cy="35" r="4" fill="#2563eb"/>
+  <circle cx="80" cy="65" r="4" fill="#2563eb"/>
+
+  <!-- Neural network connections -->
+  <line x1="24" y1="25" x2="46" y2="15" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="24" y1="25" x2="46" y2="40" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="24" y1="25" x2="46" y2="60" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+
+  <line x1="24" y1="75" x2="46" y2="40" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="24" y1="75" x2="46" y2="60" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="24" y1="75" x2="46" y2="85" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+
+  <line x1="54" y1="15" x2="76" y2="35" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="54" y1="40" x2="76" y2="35" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="54" y1="60" x2="76" y2="65" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="54" y1="85" x2="76" y2="65" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+</svg>
